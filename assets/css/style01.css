@@ -6,6 +6,9 @@ body		{ font-family: 'NanumSquare', sans-serif; }
 .bolder		{ font-weight: 800 }
 .light		{ font-weight: 300 }
 
+
+
+
 .main{
     position: relative;
 }
@@ -53,14 +56,15 @@ header{
     width: 100%;
     position: fixed;
     z-index: 99;
-    height: 80px;
+    /* height: 80px; */
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 20%);
 }
 .gnb{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .right-menu li button{
@@ -638,6 +642,10 @@ footer{
         top: 80px;
     }
 
+    .down-main{
+        margin-top: 50px;
+    }
+
     .footer-box{
         width: 100%;
     }
@@ -645,12 +653,25 @@ footer{
 }
 
 @media(max-width:540px){
+
+    .menu-btn{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        z-index: 9999;
+    }
+
     .shipping-wrap img{
         width:80%;
     }
 
     .shipping-image img{
         width: 35%;
+    }
+
+    .shipping-image{
+        padding: 30px 60px 0;
     }
 
     .content-box{
@@ -704,7 +725,8 @@ footer{
     }
     .product-ex01{
         width: 100%;
-        margin-left: 150px;
+        margin: 0 auto;
+        justify-content: center;
         display: flex;
         align-items: center;
     }
@@ -724,6 +746,24 @@ footer{
         font-size: 12px;
     }
     
+    .product{
+        padding-top: 50px
+    }
+
+    .text03{
+       padding-right: 85px;
+    }
+    .text01{
+        padding-right: 45px;
+     }
+
+     .text04{
+        padding-right: 35px;
+     }
+
+     .down-main{
+        margin-top: 0px;
+    }
 }
 
 @media(max-width:375px){
@@ -747,7 +787,7 @@ footer{
 
     .menu-btn{
         top: 0;
-        right: 90px
+        right: 15px
     }
 
     .swiper-wrapper{
@@ -776,10 +816,6 @@ footer{
 
     .product{
         padding-top: 50px
-    }
-
-    .product-ex01{
-        margin-left: 80px;
     }
 
     .text-box h1{
