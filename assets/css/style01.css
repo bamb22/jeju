@@ -6,9 +6,6 @@ body		{ font-family: 'NanumSquare', sans-serif; }
 .bolder		{ font-weight: 800 }
 .light		{ font-weight: 300 }
 
-
-
-
 .main{
     position: relative;
 }
@@ -51,6 +48,10 @@ a{
 li{
     list-style: none;
 }
+
+.text h1{
+    text-align: center;
+}
 /* header  */
 header{
     width: 100%;
@@ -66,13 +67,19 @@ header{
     justify-content: space-between;
 }
 
-button{
-    border: none;
+.right-menu li button{
     background-color: #00aa91;
-    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
     padding: 5px;
     color: #fff;
+    cursor: pointer;
+}
 
+
+ 
+.right-menu li:last-child a{
+    color: #00aa91;
 }
 
 .left-navi{
@@ -80,6 +87,7 @@ button{
     padding: 26px 0 0 40px;
 }
 .left-menu{
+    align-items: center;
     display: flex;
     padding-left: 80px;
 }
@@ -94,8 +102,21 @@ button{
     color: #222222;
     font-weight: 500;
 }
+
+/* ------수정------- */
+
+.left-menu li:hover{
+    color: #00aa91;
+}
+
+.right-menu li:hover{
+    color: #00aa91;
+}
+/* ------수정------- */
+
+
 .right-navi{
-    padding: 24px 40px 0;
+    padding: 33px 40px 0;
 }
 .right-menu{
     display: flex;
@@ -104,11 +125,6 @@ button{
     margin-top: 2px;
     padding: 0 12px;
 }
-
-.right-menu li:last-child{
-    color: #00aa91;
-}
-
 .menu-btn{
     display: none;
 }
@@ -117,7 +133,7 @@ button{
 .slide .swiper-slide{
     margin-top: 80px;
     width: 100%;
-    height: 650px;
+    height: 680px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,6 +156,7 @@ button{
 }
 
 .swiper-button-prev{
+    display: none;
     position: relative;
     top: -100px;
     left: 250px;
@@ -148,6 +165,7 @@ button{
 
 
 .swiper-button-next{
+    display: none;
     position: relative;
     top: -80px;
     left: 350px;
@@ -156,33 +174,36 @@ button{
 
 .swiper-pagination{
     position: relative;
-    top: -100px;
-    left: -100px;
-    z-index: 999;
+    top: -130px;
+    left: -410px;
 }
 
 .mobile-slide{
     display: none;
 }
-
 .notice-wrap{
     width: 100%;
     border-bottom: 1px solid #d9d9d9;
 }
 .conts-area{
+    padding: 20px;
     width: 960px;
     margin: auto;
 }
 
-.notice-area{
-    height: 76px;
+.conts-area span{
+    margin-left: 50px;
 }
+
+/* .notice-area{
+    height: 76px;
+} */
 .notice-area h2,span{
  font-size: 16px;
 }
-.notice-area span{
+/* .notice-area span{
     margin-left: 30px;
-}
+} */
 .notice-area a:hover{
     text-decoration: underline;
 }
@@ -217,7 +238,7 @@ button{
 }
 .text h1{
     position: relative;
-    top: 150px;
+    top: 100px;
     text-align: center;
 }
 
@@ -323,7 +344,88 @@ button{
     border-radius: 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
+/* ------수정------- */
+
+.box1:hover{
+  background-color: #00aa9131;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.068);
+}
+
+.text-box p:hover{
+   color: #222;
+}
+/* ------수정------- */
+/* -----수정------ */
+
+.shipping-btn{
+    padding-top: 50px;
+}
+
+.shipping-btn a {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .shipping-btn a:hover .wave {
+    top: -120px;
+  }
+  .shipping-btn a span {
+    margin: 0px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 7px;
+    line-height: 20px;
+  }
+  .shipping-btn a .wave {
+    width: 200px;
+    height: 200px;
+    background-color: #00aa91;
+    box-shadow: inset 0 0 50px rgba(226, 224, 224, 0.5);
+    position: absolute;
+    left: 0;
+    top: -80px;
+    transition: 0.4s;
+  }
+  .shipping-btn a .wave::before, .shipping-btn a .wave::after {
+    width: 200%;
+    height: 200%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  .shipping-btn a .wave::before {
+    border-radius: 45%;
+    background-color: #c5c5c5;
+    animation: wave 5s linear infinite;
+  }
+  .shipping-btn a .wave::after {
+    border-radius: 40%;
+    background-color: #72b3a9;
+    animation: wave 10s linear infinite;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+  /* -----수정------ */
 
 .box-img{
     width: 30%;
@@ -529,35 +631,37 @@ footer{
         top: 100px;
         left: 20%;
     }
-
-    .text h1{
-        top: 100px;
-    }
 }
 
 @media(max-width:768px){
-    header{
-        height: 90px;
-    }
-
+    
     .mobile-slide{
         display: block
     }
-
     .mobile-slide .swiper-slide{
-        height: 400px;
+        height: 300px;
     }
 
     .swiper-button-prev{
-        display: none
+        display: none;
+        position: relative;
+        top: -10px;
+        left: 40px;
+        width: 15px;
     }
     
     .swiper-button-next{
-        display: none
+        display: none;
+        position: relative;
+        top: 10px;
+        left: 100px;
+        width: 15px;
     }
     
     .swiper-pagination{
-        display: none
+        position: relative;
+        top: 10px;
+        left: -250px;
     } 
 
 
@@ -611,15 +715,9 @@ footer{
         margin-bottom: 50px;
     }
 
-    .text h1{
-        top: 70px;
-    }
-
     .content-box{
         flex-direction: column;  
       }
-
-     
   
       .box1{
           width: 80%;
@@ -642,10 +740,6 @@ footer{
         top: 80px;
     }
 
-    .down-main{
-        margin-top: 50px;
-    }
-
     .footer-box{
         width: 100%;
     }
@@ -653,29 +747,12 @@ footer{
 }
 
 @media(max-width:540px){
-
-    .menu-btn{
-        display: block;
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        z-index: 9999;
-    }
-
-    .mobile-slide .swiper-slide{
-        height: 300px;
-    }
-
     .shipping-wrap img{
         width:80%;
     }
 
     .shipping-image img{
         width: 35%;
-    }
-
-    .shipping-image{
-        padding: 30px 60px 0;
     }
 
     .content-box{
@@ -688,8 +765,10 @@ footer{
         margin: 10px auto;
     }
 
-    .text h1{
-        top:  -10px;
+    .text h2{
+        padding-top: 50px;
+        font-size: 18px;
+        top:  -20px;
     }
 
     .app-text{
@@ -727,8 +806,7 @@ footer{
     }
     .product-ex01{
         width: 100%;
-        margin: 0 auto;
-        justify-content: center;
+        margin-left: 150px;
         display: flex;
         align-items: center;
     }
@@ -748,59 +826,24 @@ footer{
         font-size: 12px;
     }
     
-    .product{
-        padding-top: 50px
-    }
-
-    .text03{
-       padding-right: 85px;
-    }
-    .text01{
-        padding-right: 45px;
-     }
-
-     .text04{
-        padding-right: 35px;
-     }
-
-     .down-main{
-        margin-top: 0px;
-    }
 }
 
 @media(max-width:375px){
 
-   body{
-       overflow-x: hidden;
-   }
-
-   header{
-       width: 100%;
-   }
-
+  
    .right-navi{
        display: none;
    }
 
-   .left-menu{
-       width: 100%;
-   }
-
-
+   
     .menu-btn{
         top: 0;
-        right: 15px
+        right: 90px
     }
 
     .swiper-wrapper{
         width: 100%;
     }
-
-    .mobile-slide .swiper-slide{
-        height: 200px;
-    }
-
-
     .conts-area h2, span a{
         font-size: 13px;
     }
@@ -826,6 +869,10 @@ footer{
         padding-top: 50px
     }
 
+    .product-ex01{
+        margin-left: 80px;
+    }
+
     .text-box h1{
         font-size: 18px;
     }
@@ -835,9 +882,17 @@ footer{
     }
 
     .app{
-        margin-right: 90px;
+        justify-content: center;
     }
 
+    .text h1{
+        font-size: 18px;
+        top: 30px;
+    }
+
+    .slide .swiper-slide{
+        height: 180px;
+    }
     
 
     .footer-box{
