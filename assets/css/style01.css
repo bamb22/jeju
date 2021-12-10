@@ -174,9 +174,10 @@ header{
 
 .swiper-pagination{
     position: relative;
-    top: -130px;
+    top: -50px;
     left: -410px;
 }
+
 
 .mobile-slide{
     display: none;
