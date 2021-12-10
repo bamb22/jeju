@@ -53,14 +53,10 @@
                   <div class="swiper-slide bg2"></div>
                   <div class="swiper-slide bg3"></div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
               </div>
-              <div class="swiper-button-next">
-                <img src="assets/images/btn_next.png" alt="">
-            </div>
-            <div class="swiper-button-prev">
-                <img src="assets/images/btn_prev.png" alt="">
-            </div>
-            <div class="swiper-pagination"></div>
         </div>
         <div class="slide mobile-slide">
             <div class="swiper mySwiper">
@@ -267,9 +263,15 @@
         });
 
         var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
-          type: "fraction",
+          clickable: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
